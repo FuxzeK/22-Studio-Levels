@@ -385,6 +385,11 @@ a {
 
 /* CONTACTO */
 
+.contact-card {
+  background: rgba(8, 5, 18, 0.98); /* fondo más parejo y oscuro */
+  box-shadow: 0 0 22px rgba(155, 92, 255, 0.35); /* glow suave morado */
+}
+
 .contact-card ul {
   padding-left: 18px;
 }
@@ -392,6 +397,7 @@ a {
 .contact-card li {
   font-size: 0.9rem;
 }
+
 
 /* FOOTER */
 
