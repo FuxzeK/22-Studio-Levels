@@ -458,42 +458,48 @@
       </section>
 
       <!-- SOBRE FUXZEK / 22 STUDIOS + CONTACTO -->
-     <section id="contacto" class="section">
+    <section id="contacto" class="section">
   <div class="section-header">
-    <h2>Sobre <span class="gradient-text">22 Studios / FuxZeK</span></h2>
+    <h2>Sobre <span class="gradient-text">22 Studios / FuxzeK</span></h2>
     <p>Productor musical, artista y creador del sistema 22 Levels.</p>
   </div>
+
   <div class="grid two">
+    <!-- BIO -->
     <div class="card card-outline">
-      <h3>¿Quién es FuxZeK?</h3>
+      <h3>¿Quién es FuxzeK?</h3>
       <p>
-        FuxZeK es productor y artista paraguayo con casi una década metido en la música urbana.
+        FuxzeK es productor y artista paraguayo con casi una década metido en la música urbana.
         Empezó como muchos: haciendo beats en su pieza, grabando a amigos y aprendiendo mezcla
-        a prueba y error. Con el tiempo terminó trabajando con artistas como Nani, Xviru, Chappie Boyz
-        y diferentes proyectos de la escena local e internacional.
+        a prueba y error. Con los años fue puliendo su sonido hasta convertir 22 Studios
+        en su base creativa.
       </p>
       <p>
-        22 Studios nació como su laboratorio creativo: un espacio donde los artistas pueden venir,
-        experimentar y salir con un sonido profesional. 22 Levels es la evolución de esa idea:
-        un sistema pensado para que el artista no dependa de la suerte, sino de su constancia.
+        22 Levels nace de esa experiencia. La idea es darle a los artistas un camino claro:
+        no depender del azar, sino de la constancia. Cada mes en el estudio es un nivel más,
+        un tema más y un paso más cerca de la versión de artista que querés ser.
       </p>
       <p>
-        La visión es simple: demostrar que desde Paraguay se pueden construir proyectos serios,
-        competitivos y con estética mundial, sin perder la esencia de barrio y la honestidad
-        de la música que nace de verdad.
+        La visión es simple: que desde Paraguay se puedan construir proyectos serios, con sonido
+        competitivo y estética cuidada, sin perder la esencia real de donde uno viene.
       </p>
     </div>
-    <div class="card card-glow contact-card">
+
+    <!-- CONTACTO + FORM -->
+    <div class="card contact-card">
       <h3>Contacto</h3>
-      <p>Si querés más info o reservar tu lugar en el sistema:</p>
+      <p>Si querés más info o reservar tu lugar en 22 Levels:</p>
       <ul class="list">
         <li>📱 WhatsApp: <a href="https://wa.me/595982592460" target="_blank">+595 982 592460</a></li>
         <li>📷 Instagram: <a href="https://instagram.com/FuxzeK_cb" target="_blank">@FuxzeK_cb</a></li>
       </ul>
-      <a class="btn primary full" href="https://wa.me/595982592460?text=Hola%20quiero%20entrar%20al%20sistema%2022%20Levels">
-        Quiero entrar a 22 Levels      
-        <h3 style="margin-top:18px;">Contacto rápido</h3>
-      <form class="contact-form" onsubmit="enviarWhatsApp(event)">
+
+      <h3 style="margin-top:18px;">Contacto rápido</h3>
+      <p class="text-muted" style="font-size:0.8rem;">
+        Completá esto y te abre WhatsApp con el mensaje listo para enviar:
+      </p>
+
+      <form id="contact-form" class="contact-form">
         <div>
           <label for="nombre">Nombre / Artista</label>
           <input id="nombre" type="text" placeholder="Tu nombre o alias artístico" required />
@@ -504,16 +510,16 @@
         </div>
         <div>
           <label for="servicio">¿Qué querés hacer?</label>
-          <textarea id="servicio" placeholder="Ej: Quiero producir un tema tipo trap romántico, o hacer mix & master de un tema que ya grabé." required></textarea>
+          <textarea id="servicio" placeholder="Ej: producir un trap romántico, mix & master, etc." required></textarea>
         </div>
         <button type="submit" class="btn whatsapp">
           Enviar detalle por WhatsApp
         </button>
       </form>
-      </a>
     </div>
   </div>
 </section>
+
 
     <footer class="main-footer">
       <p>© <span id="year"></span> 22 Levels · 22 Studios · Asunción, Paraguay.</p>
@@ -521,30 +527,32 @@
   </div>
 
   <script>
-    // Año automático en el footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-    <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <script>
+  // Año automático en el footer
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    function enviarWhatsApp(e) {
+  // Enviar datos del formulario a WhatsApp
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       const nombre = document.getElementById('nombre').value.trim();
       const ig = document.getElementById('instagram').value.trim();
       const servicio = document.getElementById('servicio').value.trim();
 
-      let mensaje = "Hola FuxZeK, quiero info sobre 22 Levels.%0A%0A";
+      let mensaje = "Hola FuxzeK, quiero info sobre 22 Levels.%0A%0A";
       mensaje += "Nombre / Artista: " + nombre + "%0A";
       if (ig) mensaje += "Instagram: " + ig + "%0A";
-      mensaje += "Lo que quiero hacer: " + servicio + "%0A";
+      mensaje += "Quiero hacer: " + servicio + "%0A";
 
       const url = "https://wa.me/595982592460?text=" + mensaje;
       window.open(url, "_blank");
-    }
-  </script>
-
-  </script>
+    });
+  }
+</script>
 </body>
 </html>
+
 <!-- SERVICIOS -->
 <section id="servicios" class="section">
   <div class="section-header">
