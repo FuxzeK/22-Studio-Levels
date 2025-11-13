@@ -243,7 +243,6 @@
       </section>
 
       <!-- PORTAFOLIO -->
-      <!-- PORTAFOLIO -->
 <section id="portafolio" class="section">
   <div class="section-header">
     <h2>Producciones de <span class="gradient-text">22 Studios</span></h2>
@@ -331,6 +330,88 @@
         </div>
       </section>
 
+      <!-- VISIÓN -->
+<section id="vision" class="section">
+  <div class="section-header">
+    <h2>Visión de <span class="gradient-text">22 Levels</span></h2>
+    <p>Mucho más que un estudio: una forma distinta de construir tu carrera.</p>
+  </div>
+
+  <div class="grid two">
+    <div class="card card-outline">
+      <h3>Un sistema para la constancia</h3>
+      <p>
+        22 Levels existe porque muchos artistas con talento se pierden por falta de estructura.
+        Acá el objetivo es simple: que cada mes salgas del estudio con música nueva y un nivel más.
+      </p>
+      <p>
+        No se trata solo de sacar “un tema”. Se trata de crear catálogo, mejorar tu performance,
+        encontrar tu sonido y tener un proceso que te haga crecer.
+      </p>
+    </div>
+
+    <div class="card card-glow">
+      <h3>Desde Paraguay para el mapa</h3>
+      <p>
+        La meta es demostrar que desde Paraguay se pueden construir proyectos serios, con sonido mundial
+        y estética cuidada. 22 Levels busca ser la base de esos proyectos: artistas que no esperan
+        a que algo pase, sino que deciden subir de nivel ellos mismos.
+      </p>
+    </div>
+  </div>
+</section>
+
+      <!-- PROCESO DE TRABAJO -->
+<section id="proceso" class="section">
+  <div class="section-header">
+    <h2>Cómo trabajamos en <span class="gradient-text">22 Studios</span></h2>
+    <p>Para que sepas exactamente qué esperar cuando entrás al estudio.</p>
+  </div>
+
+  <div class="grid two">
+    <div class="card">
+      <h3>Proceso creativo</h3>
+      <ul class="process-list">
+        <li class="process-step">
+          <div class="process-step-badge">1</div>
+          <div class="process-step-text">
+            Me mandás tus referencias, ideas de letras o vibes que querés lograr.
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="process-step-badge">2</div>
+          <div class="process-step-text">
+            Armamos el beat en sesión, ajustando sonidos, drums y estructura a tu estilo.
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="process-step-badge">3</div>
+          <div class="process-step-text">
+            Grabamos voces cuidando interpretación, afinación y actitud del tema.
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="process-step-badge">4</div>
+          <div class="process-step-text">
+            Mezcla y master hasta que el tema suene sólido en parlantes, auris y auto.
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card card-outline">
+      <h3>Dentro de 22 Levels</h3>
+      <p>
+        Si estás dentro del sistema de niveles, cada producción suma a tu racha y te acerca a nuevos
+        beneficios: descuentos, beats, combos y precios preferenciales.
+      </p>
+      <p>
+        Siempre vas a saber en qué nivel estás, qué te toca y cómo aprovechar mejor cada visita al estudio.
+      </p>
+    </div>
+  </div>
+</section>
+
       <!-- FAQ -->
       <section id="faq" class="section">
         <div class="section-header">
@@ -410,7 +491,25 @@
         <li>📷 Instagram: <a href="https://instagram.com/FuxzeK_cb" target="_blank">@FuxzeK_cb</a></li>
       </ul>
       <a class="btn primary full" href="https://wa.me/595982592460?text=Hola%20quiero%20entrar%20al%20sistema%2022%20Levels">
-        Quiero entrar a 22 Levels
+        Quiero entrar a 22 Levels      
+        <h3 style="margin-top:18px;">Contacto rápido</h3>
+      <form class="contact-form" onsubmit="enviarWhatsApp(event)">
+        <div>
+          <label for="nombre">Nombre / Artista</label>
+          <input id="nombre" type="text" placeholder="Tu nombre o alias artístico" required />
+        </div>
+        <div>
+          <label for="instagram">Instagram</label>
+          <input id="instagram" type="text" placeholder="@tuusuario" />
+        </div>
+        <div>
+          <label for="servicio">¿Qué querés hacer?</label>
+          <textarea id="servicio" placeholder="Ej: Quiero producir un tema tipo trap romántico, o hacer mix & master de un tema que ya grabé." required></textarea>
+        </div>
+        <button type="submit" class="btn whatsapp">
+          Enviar detalle por WhatsApp
+        </button>
+      </form>
       </a>
     </div>
   </div>
@@ -424,6 +523,25 @@
   <script>
     // Año automático en el footer
     document.getElementById('year').textContent = new Date().getFullYear();
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function enviarWhatsApp(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const ig = document.getElementById('instagram').value.trim();
+      const servicio = document.getElementById('servicio').value.trim();
+
+      let mensaje = "Hola FuxZeK, quiero info sobre 22 Levels.%0A%0A";
+      mensaje += "Nombre / Artista: " + nombre + "%0A";
+      if (ig) mensaje += "Instagram: " + ig + "%0A";
+      mensaje += "Lo que quiero hacer: " + servicio + "%0A";
+
+      const url = "https://wa.me/595982592460?text=" + mensaje;
+      window.open(url, "_blank");
+    }
+  </script>
+
   </script>
 </body>
 </html>
