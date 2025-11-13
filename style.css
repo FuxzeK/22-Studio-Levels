@@ -403,3 +403,203 @@ a {
   color: var(--text-muted);
   background: rgba(5, 4, 12, 0.95);
 }
+/* === ANIMACIONES Y EFECTOS SOLO LEVELING === */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 18px rgba(155, 92, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(197, 139, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 18px rgba(155, 92, 255, 0.5);
+  }
+}
+
+@keyframes subtle-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Aura de fondo global */
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(155, 92, 255, 0.05) 0, transparent 55%),
+    radial-gradient(circle at 90% 100%, rgba(197, 139, 255, 0.08) 0, transparent 55%);
+  z-index: -1;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: subtle-float 18s ease-in-out infinite;
+}
+
+/* Aplicar animaciones a elementos clave */
+
+.hero-content {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.logo {
+  animation: glow-pulse 4.5s ease-in-out infinite;
+}
+
+.btn.primary {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.section-header h2 {
+  animation: fade-up 0.6s ease-out both;
+}
+
+.card {
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(155, 92, 255, 0.4);
+  box-shadow: 0 0 26px rgba(155, 92, 255, 0.4);
+}
+
+/* Sección Servicios & Proceso */
+
+.services-grid {
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 880px) {
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.service-price {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+  margin-bottom: 6px;
+}
+
+.service-tag {
+  font-size: 0.75rem;
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(10, 6, 25, 0.9);
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.process-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.process-step {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.process-step-badge {
+  min-width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #080415;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.process-step-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Formulario contacto rápido */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 7px 9px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: rgba(6, 4, 15, 0.95);
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+.contact-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-strong);
+}
+
+.btn.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: #04100a;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn.whatsapp:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.5);
+}
