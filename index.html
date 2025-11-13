@@ -500,27 +500,26 @@
       </p>
 
       <form id="contact-form" class="contact-form">
-        <div>
-          <label for="nombre">Nombre / Artista</label>
-          <input id="nombre" type="text" placeholder="Tu nombre o alias artístico" required />
-        </div>
-        <div>
-          <label for="instagram">Instagram</label>
-          <input id="instagram" type="text" placeholder="@tuusuario" />
-        </div>
-        <div>
-          <label for="servicio">¿Qué querés hacer?</label>
-          <textarea id="servicio" placeholder="Ej: producir un trap romántico, mix & master, etc." required></textarea>
-        </div>
-        <button type="submit" class="btn whatsapp">
-          Enviar detalle por WhatsApp
-        </button>
+  <div>
+    <label for="nombre">Nombre / Artista</label>
+    <input id="nombre" type="text" placeholder="Tu nombre o alias artístico" required />
+  </div>
+  <div>
+    <label for="instagram">Instagram</label>
+    <input id="instagram" type="text" placeholder="@tuusuario" />
+  </div>
+  <div>
+    <label for="servicio">¿Qué querés hacer?</label>
+    <textarea id="servicio" placeholder="Ej: producir un trap romántico, mix & master, etc." required></textarea>
+  </div>
+  <button type="submit" class="btn whatsapp">
+    Enviar detalle por WhatsApp
+  </button>
       </form>
     </div>
   </div>
 </section>
-
-
+      
     <footer class="main-footer">
       <p>© <span id="year"></span> 22 Levels · 22 Studios · Asunción, Paraguay.</p>
     </footer>
@@ -528,6 +527,7 @@
 
   <script>
   <script>
+ <script>
   // Año automático en el footer
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -540,7 +540,7 @@
       const ig = document.getElementById('instagram').value.trim();
       const servicio = document.getElementById('servicio').value.trim();
 
-      let mensaje = "Hola FuxzeK, quiero info sobre 22 Levels.%0A%0A";
+      let mensaje = "Hola FuxZeK, quiero info sobre 22 Levels.%0A%0A";
       mensaje += "Nombre / Artista: " + nombre + "%0A";
       if (ig) mensaje += "Instagram: " + ig + "%0A";
       mensaje += "Quiero hacer: " + servicio + "%0A";
