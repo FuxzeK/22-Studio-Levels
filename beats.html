@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catálogo de Beats | 22 Levels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de beats exclusivos producidos por FuxzeK en 22 Studios." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="main-header">
+      <div class="logo-area">
+        <img src="logo.png" alt="22 Studios Logo" class="logo" />
+        <div class="logo-text">
+          <span class="logo-title">22 LEVELS</span>
+          <span class="logo-subtitle">Catálogo de Beats</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#home">Inicio</a>
+        <a href="index.html#sobre">Sobre 22 Levels</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="beats.html">Catálogo de beats</a>
+        <a href="index.html#contacto" class="nav-cta">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <h2>Catálogo de <span class="gradient-text">beats exclusivos</span></h2>
+          <p>
+            Beats producidos en 22 Studios por FuxzeK.<br />
+            Elegí el que te guste, hablame por WhatsApp y cerramos la exclusiva.
+          </p>
+        </div>
+
+        <div class="grid three">
+          <!-- BEAT EJEMPLO 1 -->
+          <div class="card">
+            <h3>FUNK SUNSET</h3>
+            <p class="rank-meta">Tipo: Funk / Trap · 132 BPM · F# minor</p>
+            <p class="service-price">Licencia exclusiva: ₲200.000</p>
+            <audio controls style="width:100%; margin-top:8px;">
+              <!-- poné tu archivo real acá -->
+              <source src="beats/funk_sunset.mp3" type="audio/mpeg" />
+              Tu navegador no soporta audio.
+            </audio>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">
+              Para comprar este beat, escribime por WhatsApp con el nombre del beat.
+            </p>
+          </div>
+
+          <!-- BEAT EJEMPLO 2 -->
+          <div class="card">
+            <h3>NIGHT DRIVE</h3>
+            <p class="rank-meta">Tipo: Trap / R&B · 145 BPM · D minor</p>
+            <p class="service-price">Licencia exclusiva: ₲200.000</p>
+            <audio controls style="width:100%; margin-top:8px;">
+              <source src="beats/night_drive.mp3" type="audio/mpeg" />
+              Tu navegador no soporta audio.
+            </audio>
+          </div>
+
+          <!-- BEAT EJEMPLO 3 -->
+          <div class="card">
+            <h3>PIXEL LOVE</h3>
+            <p class="rank-meta">Tipo: Video game / Trap · 150 BPM · G minor</p>
+            <p class="service-price">Licencia exclusiva: ₲200.000</p>
+            <audio controls style="width:100%; margin-top:8px;">
+              <source src="beats/pixel_love.mp3" type="audio/mpeg" />
+              Tu navegador no soporta audio.
+            </audio>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:26px;">
+          <h3>¿Cómo comprar un beat?</h3>
+          <ol class="list" style="padding-left:18px;">
+            <li>Anotá el nombre del beat que te gustó (ej: PIXEL LOVE).</li>
+            <li>Escribime por WhatsApp: <a href="https://wa.me/595982592460" target="_blank">+595 982 592460</a>.</li>
+            <li>Coordinamos forma de pago (transferencia / internacional) y te envío los archivos WAV + MP3.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>©️ <span id="year"></span> 22 Levels · 22 Studios · Asunción, Paraguay.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
