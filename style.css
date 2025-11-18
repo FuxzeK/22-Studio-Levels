@@ -272,7 +272,7 @@ a {
   }
 
   .main-nav {
-    display: none; /* si querés, más adelante se hace menú hamburguesa */
+    display: none;
   }
 
   .main-header {
@@ -386,8 +386,8 @@ a {
 /* CONTACTO */
 
 .contact-card {
-  background: rgba(8, 5, 18, 0.98); /* fondo más parejo y oscuro */
-  box-shadow: 0 0 22px rgba(155, 92, 255, 0.35); /* glow suave morado */
+  background: rgba(8, 5, 18, 0.98);
+  box-shadow: 0 0 22px rgba(155, 92, 255, 0.35);
 }
 
 .contact-card ul {
@@ -397,7 +397,6 @@ a {
 .contact-card li {
   font-size: 0.9rem;
 }
-
 
 /* FOOTER */
 
@@ -409,7 +408,8 @@ a {
   color: var(--text-muted);
   background: rgba(5, 4, 12, 0.95);
 }
-/* === ANIMACIONES Y EFECTOS SOLO LEVELING === */
+
+/* === ANIMACIONES Y EFECTOS === */
 
 @keyframes fade-up {
   from {
@@ -446,7 +446,7 @@ a {
   }
 }
 
-/* Aura de fondo global */
+/* Aura de fondo */
 
 .page-wrapper {
   position: relative;
@@ -465,8 +465,6 @@ a {
   pointer-events: none;
   animation: subtle-float 18s ease-in-out infinite;
 }
-
-/* Aplicar animaciones a elementos clave */
 
 .hero-content {
   animation: fade-up 0.7s ease-out both;
@@ -494,7 +492,7 @@ a {
   box-shadow: 0 0 26px rgba(155, 92, 255, 0.4);
 }
 
-/* Sección Servicios & Proceso */
+/* Sección servicios & proceso */
 
 .services-grid {
   display: grid;
@@ -525,34 +523,24 @@ a {
   margin-bottom: 8px;
 }
 
-.process-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+/* BEATS – NUEVA SECCIÓN */
+
+#beats .card h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
-.process-step {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.process-step-badge {
-  min-width: 22px;
-  height: 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #080415;
-  font-size: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-}
-
-.process-step-text {
-  font-size: 0.88rem;
+#beats .card p {
+  font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+#beats .grid.three {
+  gap: 22px;
+}
+
+#beats .card:hover {
+  box-shadow: 0 0 26px rgba(197, 139, 255, 0.4);
 }
 
 /* Formulario contacto rápido */
