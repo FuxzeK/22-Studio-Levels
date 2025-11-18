@@ -2,148 +2,119 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Catálogo de Beats | FuxzeK</title>
+  <title>Catálogo de Beats | 22 Levels</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de beats de FuxzeK · 22 Studios. Compra licencias básicas o premium para tus canciones." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    .beats-wrapper {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .beats-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .beats-header h1 {
-      font-size: 2.4rem;
-      margin-bottom: 8px;
-    }
-
-    .beats-grid {
-      display: grid;
-      gap: 22px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .beat-card {
-      background: radial-gradient(circle at top left, rgba(155,92,255,0.18), rgba(5,3,15,0.95));
-      border: 1px solid rgba(255,255,255,0.06);
-      padding: 20px;
-      border-radius: 18px;
-      transition: 0.18s ease-out;
-    }
-
-    .beat-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(155,92,255,0.4);
-      box-shadow: 0 0 26px rgba(155,92,255,0.35);
-    }
-
-    .beat-card h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      margin-bottom: 6px;
-    }
-
-    .beat-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
-    .beat-card audio {
-      width: 100%;
-      margin-top: 8px;
-      margin-bottom: 14px;
-    }
-
-    .beat-buttons {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .btn-beat {
-      flex: 1;
-      padding: 8px 14px;
-      border-radius: 12px;
-      background: rgba(15,10,30,0.8);
-      border: 1px solid var(--accent-soft);
-      color: var(--text-main);
-      font-size: 0.85rem;
-      text-align: center;
-      transition: 0.18s;
-    }
-
-    .btn-beat:hover {
-      background: rgba(155,92,255,0.22);
-      border-color: var(--accent-strong);
-    }
-
-    .back-home {
-      display: block;
-      text-align: center;
-      margin-top: 30px;
-      color: var(--accent-strong);
-      text-decoration: underline;
-    }
-  </style>
 </head>
-
 <body>
-  <div class="beats-wrapper">
-    <div class="beats-header">
-      <h1 class="gradient-text">Catálogo de Beats</h1>
-      <p>Beats producidos por FuxzeK. Escuchá, elegí y comprá la licencia que necesites.</p>
-    </div>
+  <div class="page-wrapper">
 
-    <div id="beats-container" class="beats-grid">
-      <!-- Se llena automáticamente -->
-    </div>
+    <!-- HEADER SIMPLE -->
+    <header class="main-header">
+      <div class="logo-area">
+        <img src="logo.png" alt="22 Studios Logo" class="logo" />
+        <div class="logo-text">
+          <span class="logo-title">22 LEVELS</span>
+          <span class="logo-subtitle">Catálogo de Beats</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Volver al sistema 22 Levels</a>
+      </nav>
+    </header>
 
-    <a href="index.html" class="back-home">← Volver a la página principal</a>
+    <main>
+      <!-- HERO BEATS -->
+      <section class="section hero">
+        <div class="hero-content card-glow">
+          <h1>
+            Catálogo de <span class="gradient-text">Beats</span>
+          </h1>
+          <p>
+            Beats producidos por FuxzeK en 22 Studios. Podés comprar licencia
+            <strong>básica</strong> o <strong>premium</strong> y, si querés,
+            sumar grabación + mezcla + master dentro del sistema 22 Levels.
+          </p>
+          <div class="hero-tags">
+            <span class="tag">Trap · Reggaetón · Funk · R&B</span>
+            <span class="tag">Licencias básicas y premium</span>
+            <span class="tag">Hechos en Paraguay</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LISTA DE BEATS -->
+      <section class="section">
+        <div class="section-header">
+          <h2><span class="gradient-text">Beats disponibles</span></h2>
+          <p>Ejemplo con tu primer beat subido. Después podés duplicar esta tarjeta para más beats.</p>
+        </div>
+
+        <div class="grid three">
+          <!-- BEAT 1 -->
+          <div class="card">
+            <h3>BEAT DRIFT</h3>
+            <p class="rank-meta">Estilo: Funk / Trap · BPM: 120 · Key: F#m (editá estos datos a gusto)</p>
+
+            <audio controls style="width: 100%; margin: 10px 0 6px;">
+              <source src="BEAT%20DRIFT.mp3" type="audio/mpeg" />
+              Tu navegador no soporta el reproductor de audio.
+            </audio>
+
+            <p class="list small">
+              Licencia básica: ₲120.000<br />
+              Licencia premium: ₲200.000<br />
+              (La exclusiva por ahora solo por trato directo).
+            </p>
+
+            <a
+              class="btn primary full"
+              target="_blank"
+              href="https://wa.me/595982592460?text=Hola%20FuxzeK,%20quiero%20comprar%20el%20beat%20BEAT%20DRIFT%20(y%20elegir%20licencia%20básica%20o%20premium)."
+            >
+              Comprar este beat por WhatsApp
+            </a>
+          </div>
+
+          <!-- PARA MÁS BEATS: DUPLICAR ESTA CARD Y CAMBIAR NOMBRE + SRC -->
+          <!--
+          <div class="card">
+            <h3>NOMBRE DEL BEAT</h3>
+            <p class="rank-meta">Estilo · BPM · Key</p>
+
+            <audio controls style="width: 100%; margin: 10px 0 6px;">
+              <source src="NOMBRE_DE_ARCHIVO.mp3" type="audio/mpeg" />
+            </audio>
+
+            <p class="list small">
+              Licencia básica: ₲120.000<br />
+              Licencia premium: ₲200.000
+            </p>
+
+            <a
+              class="btn primary full"
+              target="_blank"
+              href="https://wa.me/595982592460?text=Hola%20FuxzeK,%20quiero%20comprar%20el%20beat%20NOMBRE%20DEL%20BEAT."
+            >
+              Comprar este beat por WhatsApp
+            </a>
+          </div>
+          -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>©️ <span id="year"></span> 22 Levels · 22 Studios · Asunción, Paraguay.</p>
+    </footer>
   </div>
 
   <script>
-    async function loadBeats() {
-      const container = document.getElementById("beats-container");
-
-      // API de GitHub para leer la carpeta
-      const response = await fetch("https://api.github.com/repos/FuxzeK/22-Studio-Levels/contents/beats");
-      const files = await response.json();
-
-      files.forEach(file => {
-        if (file.name.endsWith(".mp3")) {
-          const beatName = file.name.replace(".mp3", "");
-
-          container.innerHTML += `
-            <div class="beat-card">
-              <h3>${beatName}</h3>
-              <p class="beat-meta">Prod. FuxzeK · BPM ??? · KEY ???</p>
-
-              <audio controls src="${file.download_url}"></audio>
-
-              <div class="beat-buttons">
-                <a class="btn-beat" href="https://wa.me/595982592460?text=Hola%20quiero%20el%20Lease%20de%20${beatName}%20(120.000%20Gs)" target="_blank">
-                  Lease – 120.000 Gs
-                </a>
-                <a class="btn-beat" href="https://wa.me/595982592460?text=Hola%20quiero%20la%20Licencia%20Premium%20de%20${beatName}%20(250.000%20Gs)" target="_blank">
-                  Premium – 250.000 Gs
-                </a>
-              </div>
-            </div>
-          `;
-        }
-      });
-    }
-
-    loadBeats();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-</html> 
+</html>
